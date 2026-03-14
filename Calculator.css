@@ -1,25 +1,18 @@
-*{
-  box-sizing:border-box;
-}
-
 body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  height:100vh;
+  font-family: Arial;
+  background: black;
   display:flex;
   justify-content:center;
   align-items:center;
-
-  background:linear-gradient(135deg,#1f1c2c,#928dab);
+  height:100vh;
+  margin:0;
 }
 
-.calculator{
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.4);
-  padding:25px;
+.calculator-container{
+  background:#111;
+  padding:20px;
   border-radius:20px;
-  width:320px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+  box-shadow:0 10px 40px rgba(0,0,0,0.6);
 }
 
 .calculation{
@@ -27,28 +20,27 @@ body{
   font-size:40px;
   text-align:right;
   margin-bottom:20px;
-  word-wrap:break-word;
+  min-height:40px;
 }
 
-.row{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:10px;
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(4,70px);
+  gap:12px;
 }
 
 .calculator-button{
-  flex:1;
-  height:65px;
-  margin:5px;
-  border-radius:50px;
+  height:70px;
+  width:70px;
+  border-radius:50%;
   border:none;
-  font-size:22px;
+  font-size:24px;
   cursor:pointer;
-  transition:all 0.2s ease;
+  transition:0.2s;
 }
 
 .calculator-button:hover{
-  transform:scale(1.05);
+  transform:scale(1.08);
 }
 
 .gray-button{
@@ -56,46 +48,35 @@ body{
   color:white;
 }
 
-.gray-button:hover{
-  background:#444;
-}
-
 .orange-button{
-  background:#ff9500;
+  background:#ff9f0a;
   color:white;
-}
-
-.orange-button:hover{
-  background:#ffa733;
 }
 
 .clear-button{
-  width:100%;
-  background:#ff3b30;
-  color:white;
+  grid-column:span 4;
+  border-radius:40px;
+  height:55px;
   font-size:18px;
+  background:#555;
+  color:white;
 }
 
-.clear-button:hover{
-  background:#ff5f56;
-}
+/* Mobile responsiveness */
 
-/* Mobile optimization */
+@media(max-width:500px){
 
-@media (max-width:480px){
+  .buttons{
+    grid-template-columns:repeat(4,60px);
+  }
 
-.calculator{
-  width:90%;
-  padding:20px;
-}
+  .calculator-button{
+    height:60px;
+    width:60px;
+    font-size:20px;
+  }
 
-.calculator-button{
-  height:60px;
-  font-size:20px;
-}
-
-.calculation{
-  font-size:34px;
-}
-
+  .calculation{
+    font-size:32px;
+  }
 }
