@@ -19,15 +19,7 @@ A browser-based calculator with a dark, iOS-style layout. Built with plain HTML,
 | `Calculator.css`| Layout, theming, and mobile breakpoints           |
 
 ## Deployment
-Live at:
-
-   ```
-
-2. Optional: serve the folder with any static server if you prefer (for example `npx serve .` or Python’s `python3 -m http.server`).
-
-## Usage
-
-Click number and operator buttons to build an expression. Press **=** to evaluate it; the result becomes the new value you can continue from. **Clear** empties everything.
+Live at:https://dauddev07.github.io/Calculator-App/
 
 ## Technical note
 
